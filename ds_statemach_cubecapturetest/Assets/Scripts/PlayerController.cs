@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Timers;
+using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour
     public GameObject droppedCube;
     public GameObject dazedEffect;
     public GameObject basePlatform;
-    
+
 
     private bool dashHeld = false;
     private Vector3 movement;
@@ -47,9 +49,12 @@ public class PlayerController : MonoBehaviour
     public GameObject deathPlane;
     public Vector3 initialPosition;
 
+    public PhotonView photonView;
+
 
     void Start()
     {
+        photonView = GetComponent<PhotonView>();
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -118,7 +123,7 @@ public class PlayerController : MonoBehaviour
                 winText.text = "Tie!";
                 EndScreen.SetActive(true);
             }
-            
+
             // If you have more than half, you win
             else
             {
@@ -149,7 +154,7 @@ public class PlayerController : MonoBehaviour
         {
             // If you simply let go of space without holding forward, the dash is canceled
             if (Input.GetAxis("Vertical") == 0) { }
-            
+
             // If you let go of space and are still holding forward, you get launched in the direction the camera is facing, and your dash goes on cooldown
             else
             {
@@ -172,7 +177,7 @@ public class PlayerController : MonoBehaviour
         // Set horizontal and vertical inputs to their respective axes
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-        
+
         // Set movement to the horizontal and vertical inputs
         movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
@@ -188,19 +193,19 @@ public class PlayerController : MonoBehaviour
 
     // Rotate input with view (i.e. forward direction changes depending on which way you are facing)
     private Vector3 RotateWithView()
-    {
-        if (cameraTransform != null)
-        {
-            Vector3 direction = cameraTransform.TransformDirection(movement);
-            direction.Set(direction.x, 0, direction.z);
-            return direction.normalized * movement.magnitude;
-        }
+     {
+         if (cameraTransform != null)
+         {
+             Vector3 direction = cameraTransform.TransformDirection(movement);
+             direction.Set(direction.x, 0, direction.z);
+             return direction.normalized * movement.magnitude;
+         }
 
-        else
-        {
-            cameraTransform = Camera.main.transform;
-            return movement;
-        }
+         else
+         {
+             cameraTransform = Camera.main.transform;
+             return movement;
+         }
     }
 
     // When you touch the Goal, if you have cubes, exchange them for points
