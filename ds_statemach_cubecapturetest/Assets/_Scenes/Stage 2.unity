@@ -136,10 +136,20 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1996144011}
+    - target: {fileID: 17995399210609245, guid: 85f54874deb51eb498987e0e4aeecfe9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 17995399210609247, guid: 85f54874deb51eb498987e0e4aeecfe9,
         type: 3}
       propertyPath: m_Height
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 17995399210609247, guid: 85f54874deb51eb498987e0e4aeecfe9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 17995399210609248, guid: 85f54874deb51eb498987e0e4aeecfe9,
         type: 3}
@@ -1305,6 +1315,50 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 942406956}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &708199161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708199160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f53c5480e85364d89b80e55cb1f56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementDisabled: 0
+  isDashing: 0
+  canDash: 1
+  dazed: 0
+  speed: 0
+  dashSpeed: 0
+  count: 0
+  score: 0
+  enemyScore: 0
+  enemyScore1: 0
+  enemyScores: 0
+  initialNumCubes: 8
+  numCubes: 0
+  dashCooldown: 5
+  currentDashCooldown: 0
+  dazedTime: 2
+  Health: 0
+  countText: {fileID: 0}
+  winText: {fileID: 0}
+  EndScreen: {fileID: 0}
+  scoreText: {fileID: 0}
+  enemyScoreText: {fileID: 0}
+  dashCooldownText: {fileID: 0}
+  cooldownSlider: {fileID: 0}
+  cam: {fileID: 0}
+  droppedCube: {fileID: 0}
+  dazedEffect: {fileID: 0}
+  basePlatform: {fileID: 0}
+  enemy: {fileID: 0}
+  enemy1: {fileID: 0}
+  deathPlane: {fileID: 0}
+  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &738147893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1768,6 +1822,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1996144011}
+    - target: {fileID: 17995399210609245, guid: 85f54874deb51eb498987e0e4aeecfe9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 17995399210609247, guid: 85f54874deb51eb498987e0e4aeecfe9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 17995399210609248, guid: 85f54874deb51eb498987e0e4aeecfe9,
         type: 3}
       propertyPath: m_RootOrder
@@ -2500,6 +2564,50 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 34435833}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1115880380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115880379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f53c5480e85364d89b80e55cb1f56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementDisabled: 0
+  isDashing: 0
+  canDash: 1
+  dazed: 0
+  speed: 0
+  dashSpeed: 0
+  count: 0
+  score: 0
+  enemyScore: 0
+  enemyScore1: 0
+  enemyScores: 0
+  initialNumCubes: 8
+  numCubes: 0
+  dashCooldown: 5
+  currentDashCooldown: 0
+  dazedTime: 2
+  Health: 0
+  countText: {fileID: 0}
+  winText: {fileID: 0}
+  EndScreen: {fileID: 0}
+  scoreText: {fileID: 0}
+  enemyScoreText: {fileID: 0}
+  dashCooldownText: {fileID: 0}
+  cooldownSlider: {fileID: 0}
+  cam: {fileID: 0}
+  droppedCube: {fileID: 0}
+  dazedEffect: {fileID: 0}
+  basePlatform: {fileID: 0}
+  enemy: {fileID: 0}
+  enemy1: {fileID: 0}
+  deathPlane: {fileID: 0}
+  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &1121882011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3443562445271265367, guid: fbe6572350e1f8f47b9839e68198367e,
@@ -3199,6 +3307,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6aa38f52c91b84a9417f0ed8d7a05e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1301804191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8047878996068239692, guid: 5bb96e118c2e17a4d81b23185ed876f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1913663920}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1301804192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301804191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f53c5480e85364d89b80e55cb1f56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementDisabled: 0
+  isDashing: 0
+  canDash: 1
+  dazed: 0
+  speed: 0
+  dashSpeed: 0
+  count: 0
+  score: 0
+  enemyScore: 0
+  enemyScore1: 0
+  enemyScores: 0
+  initialNumCubes: 8
+  numCubes: 0
+  dashCooldown: 5
+  currentDashCooldown: 0
+  dazedTime: 2
+  Health: 0
+  countText: {fileID: 0}
+  winText: {fileID: 0}
+  EndScreen: {fileID: 0}
+  scoreText: {fileID: 0}
+  enemyScoreText: {fileID: 0}
+  dashCooldownText: {fileID: 0}
+  cooldownSlider: {fileID: 0}
+  cam: {fileID: 0}
+  droppedCube: {fileID: 0}
+  dazedEffect: {fileID: 0}
+  basePlatform: {fileID: 0}
+  enemy: {fileID: 0}
+  enemy1: {fileID: 0}
+  deathPlane: {fileID: 0}
+  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &1335323674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4227,6 +4385,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1587511007, guid: 5bb96e118c2e17a4d81b23185ed876f2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4781609428958007415, guid: 5bb96e118c2e17a4d81b23185ed876f2,
         type: 3}
       propertyPath: m_Speed
@@ -4236,6 +4398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Height
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781609428958007415, guid: 5bb96e118c2e17a4d81b23185ed876f2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4781609428958007415, guid: 5bb96e118c2e17a4d81b23185ed876f2,
         type: 3}

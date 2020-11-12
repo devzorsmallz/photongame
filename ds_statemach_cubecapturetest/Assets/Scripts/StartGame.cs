@@ -7,6 +7,6 @@ public class StartGame : MonoBehaviour
 {
     public void StartGameFunc()
     {
-        SceneManager.LoadScene("Stage 2");
+        SceneManager.LoadScene("Launcher.unity");
     }
 }
