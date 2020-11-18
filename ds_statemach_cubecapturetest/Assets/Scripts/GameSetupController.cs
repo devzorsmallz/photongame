@@ -31,7 +31,7 @@ public class GameSetupController : MonoBehaviour {
         while(PhotonNetwork.IsConnected){
             yield return null;
         }
-        SceneManager.LoadScene(MultiplayerSetting.multiplayerSetting.menuScene);
+        //SceneManager.LoadScene(MultiplayerSetting.multiplayerSetting.menuScene);
     }
 
     private void CreatePlayer () {

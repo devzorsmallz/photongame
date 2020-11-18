@@ -1703,7 +1703,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e86e1c2f67b689c4eaefca59b62826c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints: []
+  healthDisplay: {fileID: 0}
+  spawnPointsTeamOne: []
+  spawnPointsTeamTwo: []
+  nextPlayersTeam: 0
 --- !u!4 &846744867
 Transform:
   m_ObjectHideFlags: 0
@@ -2552,7 +2555,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 8540480531852192346, guid: 34cd502b61a11f24aa4bdf4a08ed11b3,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 69dcae72f6da4a749b60196da3b2fa08, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b2612d00f0360f74f8e27087923d12e0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

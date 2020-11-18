@@ -11,14 +11,14 @@ public class PhotonPlayer : MonoBehaviour
     public GameObject myAvatar;
     public int myTeam;
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         PV = GetComponent<PhotonView>();
         if(PV.IsMine){
             myAvatar = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerAvatar")),
             GameSetupController.GS
         }
-    }
+    }*/
 
     // Update is called once per frame
     void Update()
