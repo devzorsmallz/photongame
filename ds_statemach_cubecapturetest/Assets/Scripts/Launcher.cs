@@ -11,8 +11,13 @@ public class Launcher : MonoBehaviourPunCallbacks {
     private GameObject delayCancelButton;
     [SerializeField]
     private int roomSize;
+    private void Start() {
+        Debug.Log("Step 1");
+        PhotonNetwork.ConnectUsingSettings();
+    }
 
     public override void OnConnectedToMaster(){
+        Debug.Log("Fuckin Made it");
         PhotonNetwork.AutomaticallySyncScene = true;
         delayStartButton.SetActive(true);
     }
