@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class WaitingRoomController : MonoBehaviourPunCallbacks {
+    // Audio stuff
+    public AudioClip audioClip;
+    private AudioSource audioSource;
+
     private PhotonView myPhotonView;
 
     [SerializeField]
@@ -37,6 +41,9 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks {
     private float maxFullGameWaitTime;
 
     private void Start () {
+        // Audio stuff
+        audioSource = GetComponent<AudioSource>();
+
         myPhotonView = GetComponent<PhotonView> ();
         fullGameTimer = maxFullGameWaitTime;
         notFullGameTimer = maxWaitTime;
@@ -127,7 +134,18 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks {
     }
 
     public void DelayCancel () {
-        PhotonNetwork.LeaveRoom ();
-        SceneManager.LoadScene (menuSceneIndex);
+        // Audio stuff
+        audioSource.PlayOneShot(audioClip);
+        StartCoroutine("DelayCancelCoroutine");
+    }
+
+    // Audio stuff
+    private IEnumerator DelayCancelCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        // Photon stuff
+        PhotonNetwork.LeaveRoom();
+        SceneManager.LoadScene(menuSceneIndex);
     }
 }

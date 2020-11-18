@@ -5,6 +5,11 @@ using Photon.Realtime;
 using UnityEngine;
 
 public class Launcher : MonoBehaviourPunCallbacks {
+
+    // Audio stuff
+    public AudioClip audioClip;
+    private AudioSource audioSource;
+
     [SerializeField]
     private GameObject delayStartButton;
     [SerializeField]
@@ -12,6 +17,10 @@ public class Launcher : MonoBehaviourPunCallbacks {
     [SerializeField]
     private int roomSize;
     private void Start() {
+
+        // Audio stuff
+        audioSource = GetComponent<AudioSource>();
+
         Debug.Log("Step 1");
         PhotonNetwork.ConnectUsingSettings();
     }
@@ -25,6 +34,18 @@ public class Launcher : MonoBehaviourPunCallbacks {
     public void DelayStart(){
         delayStartButton.SetActive(false);
         delayCancelButton.SetActive(true);
+        audioSource.PlayOneShot(audioClip);
+
+        // Audio stuff
+        StartCoroutine("DelayStartCoroutine");
+    }
+
+    // Audio stuff
+    private IEnumerator DelayStartCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        // Photon stuff
         PhotonNetwork.JoinRandomRoom();
         Debug.Log("Delay Start");
     }
