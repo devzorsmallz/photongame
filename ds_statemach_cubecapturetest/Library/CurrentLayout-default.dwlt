@@ -121,10 +121,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 957
-  m_MinSize: {x: 911, y: 421}
-  m_MaxSize: {x: 22006, y: 14042}
+  m_MinSize: {x: 910, y: 421}
+  m_MaxSize: {x: 22005, y: 14042}
   vertical: 0
-  controlID: 51
+  controlID: 139
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 392}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 57
+  controlID: 140
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 421}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 154
+  controlID: 114
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -530,7 +530,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: a4300000
     m_LastClickedID: 12452
-    m_ExpandedIDs: 000000001c3b0000a83b0000aa3b0000ac3b0000ae3b0000b03b0000
+    m_ExpandedIDs: 00000000363b0000ca3b0000cc3b0000ce3b0000d03b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -558,18 +558,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000001c3b0000a83b0000aa3b0000ae3b0000b03b0000
+    m_ExpandedIDs: ffffffff00000000363b0000cc3b0000ce3b0000d03b0000fc3b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Launcher.unity
-      m_OriginalName: Launcher.unity
+      m_Name: WaitingRoomScene
+      m_OriginalName: WaitingRoomScene
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 15496
+      m_UserData: 15398
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -845,21 +845,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 144effff104fffffee54ffffc455ffff2c56ffff4662ffffae63ffff1865ffff9c67ffffd867ffffca6affff386effff766fffff5871ffff7c71ffff9272ffffe073ffff7c76ffff0a79ffff387affff667cfffff87dffffa27effffa480ffffd281ffff5c82ffff8283ffffae85ffffa690ffffce90ffff7691ffff9691fffff091ffff9a93ffff2698ffffde98ffff369affff809affff469cffffa29dffffe2a0ffff3aa2ffff6ca2ffff04a4ffff54a8fffff6a8ffff86aaffffdcaaffff3aacffff80adffff6eb0ffff9eb1ffffd2b3ffffbcb4ffff7ebfffffb6bfffff8cc3ffffb6c4ffff7ec6ffff56c7fffffac8fffffcd2ffffe0d3ffff76d6ffffd0d7ffffbadbffffeadbffff26dcffff4cddffff80dfffff12e1ffff70e2ffffa8e4ffff2ee7ffff4eeaffffc8eaffff86ecffff0eedffff7aedffffe6eeffffe4f1ffff7af4ffffcaf4ffff40fbffff523f000076740000ba7600002c7d0000707f0000ca7f0000fa800000348c0000968c0000ba8c00002a910000b6940000bc9b0000169c00003ca8000054b7000088c0000092c10000
+      m_ExpandedIDs: acf3ffffdaf4ffff00f8ffff40fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Play Button
-        m_OriginalName: Play Button
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 36036
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
