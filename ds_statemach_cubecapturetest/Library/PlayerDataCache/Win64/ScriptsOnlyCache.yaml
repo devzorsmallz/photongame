@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - CameraZoom
     - CaptureTimer
     - ChuckMainInstance
+    - DontDestroyOnLoad
     - GameSetupController
     - Launcher
     - PhotonRoom
@@ -60,59 +61,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11808}
-    - Class: 114
-      Script: {instanceID: 11810}
-    - Class: 114
-      Script: {instanceID: 11842}
-    - Class: 114
-      Script: {instanceID: 12118}
-    - Class: 114
-      Script: {instanceID: 12538}
-    - Class: 114
-      Script: {instanceID: 12652}
-    - Class: 114
-      Script: {instanceID: 13798}
-    - Class: 114
-      Script: {instanceID: 13884}
-    - Class: 114
-      Script: {instanceID: 14382}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/_Scenes/MainMenu.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
     - Class: 23
       Script: {instanceID: 0}
     - Class: 28
@@ -135,6 +83,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -156,45 +106,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11842}
     - Class: 114
-      Script: {instanceID: 12012}
+      Script: {instanceID: 12014}
     - Class: 114
-      Script: {instanceID: 12032}
+      Script: {instanceID: 12034}
     - Class: 114
-      Script: {instanceID: 12118}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 12652}
+      Script: {instanceID: 12540}
     - Class: 114
-      Script: {instanceID: 12740}
+      Script: {instanceID: 12654}
     - Class: 114
-      Script: {instanceID: 12986}
+      Script: {instanceID: 12742}
     - Class: 114
-      Script: {instanceID: 13064}
+      Script: {instanceID: 12988}
     - Class: 114
-      Script: {instanceID: 13290}
+      Script: {instanceID: 13066}
     - Class: 114
-      Script: {instanceID: 13370}
+      Script: {instanceID: 13070}
     - Class: 114
-      Script: {instanceID: 13464}
+      Script: {instanceID: 13294}
     - Class: 114
-      Script: {instanceID: 13476}
+      Script: {instanceID: 13374}
     - Class: 114
-      Script: {instanceID: 13710}
+      Script: {instanceID: 13468}
     - Class: 114
-      Script: {instanceID: 13734}
+      Script: {instanceID: 13480}
     - Class: 114
-      Script: {instanceID: 13744}
+      Script: {instanceID: 13714}
     - Class: 114
-      Script: {instanceID: 13884}
+      Script: {instanceID: 13738}
     - Class: 114
-      Script: {instanceID: 14198}
+      Script: {instanceID: 13748}
     - Class: 114
-      Script: {instanceID: 14278}
+      Script: {instanceID: 13802}
     - Class: 114
-      Script: {instanceID: 14382}
+      Script: {instanceID: 13888}
     - Class: 114
-      Script: {instanceID: 14416}
+      Script: {instanceID: 14202}
+    - Class: 114
+      Script: {instanceID: 14282}
+    - Class: 114
+      Script: {instanceID: 14386}
     - Class: 114
       Script: {instanceID: 14420}
+    - Class: 114
+      Script: {instanceID: 14424}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -230,6 +186,8 @@ ScriptsOnlyBuild:
     - Class: 243
       Script: {instanceID: 0}
     - Class: 245
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
     Assets/_Scenes/Stage 2.unity:
     - Class: 1
@@ -283,29 +241,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11842}
     - Class: 114
-      Script: {instanceID: 12118}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 12652}
+      Script: {instanceID: 12654}
     - Class: 114
-      Script: {instanceID: 12704}
+      Script: {instanceID: 12706}
     - Class: 114
-      Script: {instanceID: 13034}
+      Script: {instanceID: 13036}
     - Class: 114
-      Script: {instanceID: 13224}
+      Script: {instanceID: 13228}
     - Class: 114
-      Script: {instanceID: 13446}
+      Script: {instanceID: 13450}
     - Class: 114
-      Script: {instanceID: 13884}
+      Script: {instanceID: 13888}
     - Class: 114
-      Script: {instanceID: 14198}
+      Script: {instanceID: 14202}
     - Class: 114
-      Script: {instanceID: 14252}
+      Script: {instanceID: 14256}
     - Class: 114
-      Script: {instanceID: 14366}
+      Script: {instanceID: 14370}
     - Class: 114
-      Script: {instanceID: 14382}
+      Script: {instanceID: 14386}
     - Class: 114
-      Script: {instanceID: 14416}
+      Script: {instanceID: 14420}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -345,11 +303,25 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -362,17 +334,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11842}
     - Class: 114
-      Script: {instanceID: 12118}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 12302}
+      Script: {instanceID: 12304}
     - Class: 114
-      Script: {instanceID: 12652}
+      Script: {instanceID: 12654}
     - Class: 114
-      Script: {instanceID: 13884}
+      Script: {instanceID: 13888}
     - Class: 114
-      Script: {instanceID: 14278}
+      Script: {instanceID: 14282}
     - Class: 114
-      Script: {instanceID: 14382}
+      Script: {instanceID: 14386}
+    - Class: 114
+      Script: {instanceID: 14420}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -388,6 +362,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -522,6 +498,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChatGui
+  - hash:
+      serializedVersion: 2
+      Hash: 1f8d9bb9ee61b5dff62c892a9c2bd813
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PhotonPlayer
   - hash:
       serializedVersion: 2
       Hash: 74c875e0f15c48e0a55f06093aa93e15
@@ -728,7 +710,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 3da111bbd0565fd47f2bca5d92fcb8a6
+      Hash: d8262dd04ceea7cbcb7b06c1af209d56
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WaitingRoomController
@@ -1112,6 +1094,12 @@ ScriptsOnlyBuild:
     className: PhotonTransformView
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DontDestroyOnLoad
+  - hash:
+      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1484,7 +1472,7 @@ ScriptsOnlyBuild:
     className: OnJoinedInstantiate
   - hash:
       serializedVersion: 2
-      Hash: 44f5a0809aa16bfd25483e7fc20cccf1
+      Hash: c0e58a5a66e4f32ac9520edc49506d85
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Launcher
@@ -1874,7 +1862,7 @@ ScriptsOnlyBuild:
     className: CurrentRoomExpectedUsersProperty
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: f4d0a7f13d382b8b526f0cac0d2dd6c3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameSetupController
@@ -1910,7 +1898,7 @@ ScriptsOnlyBuild:
     className: WorldGenerator
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 5f11c185a7166913bec65d557f741906
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StartGame
@@ -1976,8 +1964,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
-  - Assets/_Scenes/MainMenu.unity
   - Assets/_Scenes/Launcher.unity.unity
   - Assets/_Scenes/WaitingRoomScene.unity
   - Assets/_Scenes/Stage 2.unity
-  playerPath: D:/My Games/Photon Game/smallwood_assignment13.exe
+  playerPath: C:/Users/Devzo/OneDrive/Documents/GIMM400/repo_photon/photongame/ds_statemach_cubecapturetest/Builds/smallwood_assignment13.exe

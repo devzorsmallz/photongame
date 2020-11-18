@@ -38,7 +38,7 @@ public class StartGame : MonoBehaviour
         Application.Quit();
     }
 
-    public void BackToMenu()
+    /* public void BackToMenu()
     {
         audioSource.PlayOneShot(audioClip);
         StartCoroutine("BackToMenuCoroutine");
@@ -50,5 +50,5 @@ public class StartGame : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         PhotonNetwork.Disconnect();
         SceneManager.LoadScene("MainMenu");
-    }
+    } */
 }

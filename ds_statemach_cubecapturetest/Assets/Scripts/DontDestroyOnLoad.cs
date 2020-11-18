@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DontDestroyOnLoad : MonoBehaviour
 {
@@ -31,6 +32,14 @@ public class DontDestroyOnLoad : MonoBehaviour
         {
             if (this != _instance)
                 Destroy(this.gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Stage 2")
+        {
+            Destroy(this.gameObject);
         }
     }
 }
