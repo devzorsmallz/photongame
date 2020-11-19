@@ -23,6 +23,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -31,6 +33,12 @@ ScriptsOnlyBuild:
     - Photon.Pun.ServerSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -70,6 +78,8 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
@@ -116,6 +126,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12654}
     - Class: 114
+      Script: {instanceID: 12694}
+    - Class: 114
       Script: {instanceID: 12742}
     - Class: 114
       Script: {instanceID: 12988}
@@ -132,6 +144,10 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13480}
     - Class: 114
+      Script: {instanceID: 13528}
+    - Class: 114
+      Script: {instanceID: 13546}
+    - Class: 114
       Script: {instanceID: 13714}
     - Class: 114
       Script: {instanceID: 13738}
@@ -140,7 +156,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13802}
     - Class: 114
+      Script: {instanceID: 13810}
+    - Class: 114
       Script: {instanceID: 13888}
+    - Class: 114
+      Script: {instanceID: 14096}
     - Class: 114
       Script: {instanceID: 14202}
     - Class: 114
@@ -325,8 +345,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11808}
     - Class: 114
@@ -339,6 +357,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12304}
     - Class: 114
       Script: {instanceID: 12654}
+    - Class: 114
+      Script: {instanceID: 13528}
+    - Class: 114
+      Script: {instanceID: 13810}
     - Class: 114
       Script: {instanceID: 13888}
     - Class: 114
@@ -1472,7 +1494,7 @@ ScriptsOnlyBuild:
     className: OnJoinedInstantiate
   - hash:
       serializedVersion: 2
-      Hash: c0e58a5a66e4f32ac9520edc49506d85
+      Hash: 343f795fdbf3f41aeab2f448fe5c0dce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Launcher

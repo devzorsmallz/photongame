@@ -10,6 +10,9 @@ public class Launcher : MonoBehaviourPunCallbacks {
     public AudioClip audioClip;
     private AudioSource audioSource;
 
+    public GameObject loadingButton;
+    public GameObject quitButton;
+
     [SerializeField]
     private GameObject delayStartButton;
     [SerializeField]
@@ -29,12 +32,16 @@ public class Launcher : MonoBehaviourPunCallbacks {
         Debug.Log("Fuckin Made it");
         PhotonNetwork.AutomaticallySyncScene = true;
         delayStartButton.SetActive(true);
+        loadingButton.SetActive(false);
+        quitButton.SetActive(true);
     }
 
     public void DelayStart(){
         delayStartButton.SetActive(false);
         delayCancelButton.SetActive(true);
         audioSource.PlayOneShot(audioClip);
+
+        quitButton.SetActive(false);
 
         // Audio stuff
         StartCoroutine("DelayStartCoroutine");
