@@ -38,12 +38,21 @@ public class PlayerController : MonoBehaviour
     public GameObject dazedEffect;
     public GameObject basePlatform;
 
+    // Audio stuff
+    public AudioClip dazedSound;
+    public AudioClip dashSound;
+    public AudioClip respawnSound;
+    public AudioClip collectAtGoalSound;
 
     private bool dashHeld = false;
     private Vector3 movement;
     private Rigidbody rb;
     private Transform cameraTransform;
     private GameObject dazedEffectInstance;
+
+    // Audio stuff
+    private AudioSource audioSource;
+
     public GameObject enemy;
     public GameObject enemy1;
     public GameObject deathPlane;
@@ -54,6 +63,9 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        // Audio stuff
+        audioSource = GetComponent<AudioSource>();
+
         photonView = GetComponent<PhotonView>();
         Time.timeScale = 1;
         Cursor.visible = false;
@@ -158,6 +170,9 @@ public class PlayerController : MonoBehaviour
             // If you let go of space and are still holding forward, you get launched in the direction the camera is facing, and your dash goes on cooldown
             else
             {
+                // Audio stuff
+                audioSource.PlayOneShot(dashSound);
+
                 dashCooldownText.text="Wait to dash...";
                 rb.AddForce(new Vector3(cam.transform.forward.x, 0.0f, cam.transform.forward.z) * dashSpeed);
                 isDashing = true;
@@ -215,6 +230,9 @@ public class PlayerController : MonoBehaviour
         {
             if (count > 0)
             {
+                // Audio stuff
+                audioSource.PlayOneShot(collectAtGoalSound);
+
                 score += count;
                 numCubes-= count;
                 count = 0;
@@ -222,6 +240,9 @@ public class PlayerController : MonoBehaviour
         }
         if(other.CompareTag("Death Area"))
         {
+            // Audio stuff
+            audioSource.PlayOneShot(respawnSound);
+            
             rb.velocity = Vector3.zero;
             rb.angularVelocity=Vector3.zero;
             transform.position = initialPosition;
@@ -290,6 +311,9 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator DazedCountdown(int time)
     {
+        // Audio stuff
+        audioSource.PlayOneShot(dazedSound);
+
         dazedEffectInstance.SetActive(true);
 
         while (time > 0)
