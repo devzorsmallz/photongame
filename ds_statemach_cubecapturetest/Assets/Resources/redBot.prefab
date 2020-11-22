@@ -90,6 +90,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7743030595808394597}
+  - component: {fileID: 2050686974230106382}
+  - component: {fileID: 2539079154630161506}
+  - component: {fileID: 7824473392672143461}
   m_Layer: 0
   m_Name: redBot
   m_TagString: Untagged
@@ -112,6 +115,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2050686974230106382
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492204709246414342}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.5
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!136 &2539079154630161506
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492204709246414342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.74
+  m_Height: 4.29
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7824473392672143461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492204709246414342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f53c5480e85364d89b80e55cb1f56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementDisabled: 0
+  isDashing: 0
+  canDash: 1
+  dazed: 0
+  speed: 10
+  dashSpeed: 3000
+  count: 0
+  score: 0
+  enemyScore: 0
+  enemyScore1: 0
+  enemyScores: 0
+  initialNumCubes: 12
+  numCubes: 12
+  dashCooldown: 5
+  currentDashCooldown: 0
+  dazedTime: 2
+  Health: 0
+  countText: {fileID: 0}
+  winText: {fileID: 0}
+  EndScreen: {fileID: 0}
+  scoreText: {fileID: 0}
+  enemyScoreText: {fileID: 0}
+  dashCooldownText: {fileID: 0}
+  cooldownSlider: {fileID: 0}
+  cam: {fileID: 0}
+  droppedCube: {fileID: 3443562445271265366, guid: fbe6572350e1f8f47b9839e68198367e,
+    type: 3}
+  dazedEffect: {fileID: 7636653912440667067, guid: c8be2c6f9f560b347b4be8cbf4be6a8b,
+    type: 3}
+  basePlatform: {fileID: 0}
+  enemy: {fileID: 0}
+  enemy1: {fileID: 0}
+  deathPlane: {fileID: 0}
+  initialPosition: {x: 0, y: 0, z: 0}
+  photonView: {fileID: 0}
 --- !u!1 &2851327344474399111
 GameObject:
   m_ObjectHideFlags: 0
