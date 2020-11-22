@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WaitingRoomController : MonoBehaviourPunCallbacks {
+    // Audio stuff
+    public AudioClip audioClip;
+    private AudioSource audioSource;
+
     private PhotonView myPhotonView;
 
     [SerializeField]
@@ -37,6 +41,9 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks {
     private float maxFullGameWaitTime;
 
     private void Start () {
+        // Audio stuff
+        audioSource = GetComponent<AudioSource>();
+
         myPhotonView = GetComponent<PhotonView> ();
         fullGameTimer = maxFullGameWaitTime;
         notFullGameTimer = maxWaitTime;
@@ -67,63 +74,77 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks {
             myPhotonView.RPC ("RPC_SendTimer", RpcTarget.Others, timerToStartGame);
         }
     }
+
     [PunRPC]
-    private void RPC_SendTimer(float timeIn){
+    private void RPC_SendTimer (float timeIn) {
         timerToStartGame = timeIn;
         notFullGameTimer = timeIn;
-        if(timeIn < fullGameTimer){
+        if (timeIn < fullGameTimer) {
             fullGameTimer = timeIn;
         }
     }
     public override void OnPlayerLeftRoom (Player otherPlayer) {
-        PlayerCountUpdate();
+        PlayerCountUpdate ();
 
     }
 
-    private void Update(){
-        WaitingForMorePlayers();
+    private void Update () {
+        WaitingForMorePlayers ();
     }
 
-    void WaitingForMorePlayers(){
-        if(playerCount <= 1){
-            ResetTimer();
+    void WaitingForMorePlayers () {
+        if (playerCount <= 1) {
+            ResetTimer ();
         }
 
-        if(readyToStart){
+        if (readyToStart) {
             fullGameTimer -= Time.deltaTime;
             timerToStartGame = fullGameTimer;
-        }
-        else if(readyToCountDown){
+            Debug.Log ("-------------------------------");
+        } else if (readyToCountDown) {
             notFullGameTimer -= Time.deltaTime;
             timerToStartGame = notFullGameTimer;
+            Debug.Log ("++++++++++++++++++++++++++++++++++");
         }
 
-        string tempTimer = string.Format("{0:00}", timerToStartGame);
+        string tempTimer = string.Format ("{0:00}", timerToStartGame);
         timerToStartDisplay.text = tempTimer;
-        if(timerToStartGame <= 0f){
-            if(startingGame){
+        if (timerToStartGame <= 0f) {
+            Debug.Log ("**************************************");
+            if (startingGame) {
                 return;
-                StartGame();
             }
+            StartGame ();
         }
     }
 
-    void ResetTimer(){
+    void ResetTimer () {
         timerToStartGame = maxWaitTime;
         notFullGameTimer = maxWaitTime;
         fullGameTimer = maxFullGameWaitTime;
     }
 
-    public void StartGame(){
+    public void StartGame () {
         startingGame = true;
-        if(!PhotonNetwork.IsMasterClient){
+        if (!PhotonNetwork.IsMasterClient) {
             return;
         }
         PhotonNetwork.CurrentRoom.IsOpen = false;
-        PhotonNetwork.LoadLevel(multiplayerSceneIndex);
+        PhotonNetwork.LoadLevel (multiplayerSceneIndex);
     }
 
-    public void DelayCancel(){
+    public void DelayCancel () {
+        // Audio stuff
+        audioSource.PlayOneShot(audioClip);
+        StartCoroutine("DelayCancelCoroutine");
+    }
+
+    // Audio stuff
+    private IEnumerator DelayCancelCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        // Photon stuff
         PhotonNetwork.LeaveRoom();
         SceneManager.LoadScene(menuSceneIndex);
     }

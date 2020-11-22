@@ -157,6 +157,10 @@ MonoBehaviour:
   dazedEffect: {fileID: 7636653912440667067, guid: c8be2c6f9f560b347b4be8cbf4be6a8b,
     type: 3}
   basePlatform: {fileID: 0}
+  dazedSound: {fileID: 8300000, guid: d260ce4368e963c45823fbc59c8c1882, type: 3}
+  dashSound: {fileID: 8300000, guid: e532cb92a5f863349a7282102591a855, type: 3}
+  respawnSound: {fileID: 8300000, guid: cfc6b3593ee77eb4980fd8825142a2a9, type: 3}
+  collectAtGoalSound: {fileID: 8300000, guid: 787fa665b227ab74bbc9222eb3c7fc14, type: 3}
   enemy: {fileID: 0}
   enemy1: {fileID: 0}
   deathPlane: {fileID: 0}
