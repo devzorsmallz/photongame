@@ -8,15 +8,11 @@ public class CaptureTimer : MonoBehaviour
     public bool hasBeenCaptured = false;
     public int captureTime;
 
-    // Audio stuff
-    public AudioClip respawnCubeSound;
-
     private bool playerCapturing = false;
     private bool enemyCapturing = false;
     private bool enemy1Capturing = false;
     private bool friendlyCapturing = false;
     private Animator anim;
-    private AudioSource audioSource;
     private GameObject player;
     private GameObject enemy;
     private GameObject enemy1;
@@ -25,9 +21,6 @@ public class CaptureTimer : MonoBehaviour
 
     void Start()
     {
-        // Audio stuff
-        audioSource = GetComponent<AudioSource>();
-
         anim = this.GetComponentInChildren<Animator>();
         player = GameObject.Find("Player");
         enemy = GameObject.Find("Enemy");
@@ -169,9 +162,6 @@ public class CaptureTimer : MonoBehaviour
         // If the cube falls through the floor, it will respawn above the arena
         else if (other.gameObject.CompareTag("Death Area"))
         {
-            // Audio stuff
-            audioSource.PlayOneShot(respawnCubeSound);
-
             transform.position = new Vector3(basePlatform.transform.position.x, basePlatform.transform.position.y + 3.0f, basePlatform.transform.position.z);
             GetComponent<SphereCollider>().isTrigger = false;
             GetComponent<Rigidbody>().isKinematic = false;
