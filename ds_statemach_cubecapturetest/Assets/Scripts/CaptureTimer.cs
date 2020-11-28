@@ -34,10 +34,10 @@ public class CaptureTimer : MonoBehaviour
         enemy1 = GameObject.Find("Enemy (1)");
         friendly = GameObject.Find("Friendly");
 
-        Physics.IgnoreCollision(player.GetComponent<Collider>(), GetComponent<Collider>(), true);
-        Physics.IgnoreCollision(friendly.GetComponent<Collider>(), GetComponent<Collider>(), true);
-        Physics.IgnoreCollision(enemy.GetComponent<Collider>(), GetComponent<Collider>(), true);
-        if(enemy1!=null)Physics.IgnoreCollision(enemy1.GetComponent<Collider>(), GetComponent<Collider>(), true);
+        // Physics.IgnoreCollision(player.GetComponent<Collider>(), GetComponent<Collider>(), true);
+        // Physics.IgnoreCollision(friendly.GetComponent<Collider>(), GetComponent<Collider>(), true);
+        // Physics.IgnoreCollision(enemy.GetComponent<Collider>(), GetComponent<Collider>(), true);
+        // if(enemy1!=null)Physics.IgnoreCollision(enemy1.GetComponent<Collider>(), GetComponent<Collider>(), true);
     }
 
     void Update()

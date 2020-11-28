@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/_Scenes/BumperBotScene.unity
+- path: Assets/Dylan/Stage 2.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
